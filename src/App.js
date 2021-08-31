@@ -5,17 +5,20 @@ import {BrowserRouter as Router, Route, Switch} from "react-router-dom"
 import Home from "./pages/Home"
 import About from "./pages/About"
 import Profile from "./pages/Profile"
+import NotFound from "./pages/NotFound"
 
 const App = () => {
   return (
-    <Router>
+    <Router > {/* basename="/clarusway"  forceRefresh */}
+      
       <div className="App">
         <Header />
       </div>
       <Switch>
         <Route path="/about" component= {About} />
         <Route path="/profile" component= {Profile} />
-        <Route path="/" component={Home} />
+        <Route exact path="/" component={Home} />
+        <Route component ={NotFound} />
       </Switch>
     </Router>
   )
