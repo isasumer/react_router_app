@@ -1,12 +1,23 @@
 import React from 'react'
 import Header from "./components/Header"
 import "./App.css"
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom"
+import Home from "./pages/Home"
+import About from "./pages/About"
+import Profile from "./pages/Profile"
 
 const App = () => {
   return (
-    <div className="App">
-      <Header/>
-    </div>
+    <Router>
+      <div className="App">
+        <Header />
+      </div>
+      <Switch>
+        <Route path="/about" component= {About} />
+        <Route path="/profile" component= {Profile} />
+        <Route path="/" component={Home} />
+      </Switch>
+    </Router>
   )
 }
 

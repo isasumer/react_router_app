@@ -3,3 +3,9 @@
   justify-content: center;
 }
 
+.nav {
+  list-style:none;
+  width:550px;
+  display:flex;
+}
+
